@@ -1,2 +1,2 @@
 # sequelize-nodejs-crud-mysql
-sequelize-docs
+Sequelize 框架进阶
