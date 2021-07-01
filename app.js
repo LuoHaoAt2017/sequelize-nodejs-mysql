@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 
 const database = 'classical_mechanics';
 const username = 'root';
-const password = '123456';
+const password = 'LuoHao-123';
 
 const sequelize = new Sequelize(database, username, password, {
   host: 'localhost',

@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/LuoHaoAt2017/sequelize-nodejs-mysql.git"
   },
-  "author": "",
+  "author": "luohao",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/LuoHaoAt2017/sequelize-nodejs-mysql/issues"
