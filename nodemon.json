@@ -6,11 +6,16 @@
   ],
   "verbose": true,
   "execMap": {
-    "js": "node ./app.js"
+    "js": "node --harmony"
   },
-  "watch": [],
+  "events": {
+    "restart": "osascript -e 'display notification \"App restarted due to:\n'$FILENAME'\" with title \"nodemon\"'"
+  },
+  "watch": [
+    "server/"
+  ],
   "env": {
     "NODE_ENV": "development"
   },
-  "ext": "js json"
+  "ext": "js,json"
 }

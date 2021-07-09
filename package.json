@@ -3,24 +3,37 @@
   "version": "1.0.0",
   "description": "Sequelize 框架进阶",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LuoHaoAt2017/sequelize-nodejs-mysql.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/LuoHaoAt2017/sequelize-nodejs-mysql/issues"
-  },
+  "private": true,
   "homepage": "https://github.com/LuoHaoAt2017/sequelize-nodejs-mysql#readme",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "start": "nodemon ./server/app.js"
+  },
   "dependencies": {
+    "ant-design-vue": "^1.7.4",
+    "axios": "^0.21.1",
+    "cookie-parser": "^1.4.5",
+    "core-js": "^3.6.5",
+    "express": "^4.17.1",
+    "js-cookie": "^2.2.1",
     "mysql2": "^2.2.5",
-    "sequelize": "^6.6.2"
+    "sequelize": "^6.6.2",
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-e2e-cypress": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-plugin-import": "^1.13.3",
+    "mockjs": "^1.1.0",
+    "nodemon": "^2.0.7",
+    "vue-template-compiler": "^2.6.11",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0"
   }
 }
