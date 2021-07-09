@@ -10,6 +10,11 @@
     "build": "vue-cli-service build",
     "start": "nodemon ./server/app.js"
   },
+  "author": "luohao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuoHaoAt2017/sequelize-nodejs-mysql/issues"
+  },
   "dependencies": {
     "ant-design-vue": "^1.7.4",
     "axios": "^0.21.1",
