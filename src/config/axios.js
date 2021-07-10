@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { baseUrl } from '@/config/env';
-// 这个文件不用引用sentry
 
 axios.defaults.baseURL = baseUrl;
 axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded';
@@ -14,7 +13,7 @@ axios.interceptors.request.use((config) => {
 
 // 响应拦截器
 axios.interceptors.response.use((response) => {
-  return response.data;
+  return response.data.response;
 }, (error) => {
   if (error.response) {
     switch (error.response.status) {
@@ -27,5 +26,4 @@ axios.interceptors.response.use((response) => {
   }
   return error;
 });
-
 export default axios;

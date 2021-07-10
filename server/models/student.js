@@ -37,7 +37,7 @@ module.exports = function (sequelize, Sequelize) {
       type: Sequelize.DataTypes.BOOLEAN,
       allowNull: true,
     },
-    cid: {
+    cid: { // 外键有多的一方维护
       type: Sequelize.DataTypes.UUID,
       allowNull: true,
     }
