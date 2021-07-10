@@ -1,11 +1,10 @@
 const express = require('express');
-const cookieparser = require('cookie-parser');
+const bodyParser = require('body-parser')
 const app = express();
 const router = require('./routes');
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieparser());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.use(router);
 

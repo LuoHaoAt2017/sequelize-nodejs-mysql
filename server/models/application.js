@@ -41,6 +41,9 @@ module.exports = function(sequelize, Sequelize) {
     sequelize: sequelize,
     modelName: 'Application',
     freezeTableName: true,
+    timestamps: true,
+    createdAt: 'createdTime', // 时间戳
+    updatedAt: 'updatedTime', // 时间戳
   });
 
   return Application;

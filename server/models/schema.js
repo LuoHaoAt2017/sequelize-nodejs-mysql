@@ -8,7 +8,6 @@ module.exports = function(sequelize, Sequelize) {
         foreignKey: 'appCode',
         as: 'application'
       });
-      // Schema.belongsTo(models.Application);
     }
   }
 
@@ -35,7 +34,6 @@ module.exports = function(sequelize, Sequelize) {
   }, {
     sequelize: sequelize,
     modelName: 'Schema',
-    freezeTableName: true,
   });
 
   return Schema;

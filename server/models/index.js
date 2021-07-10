@@ -15,21 +15,19 @@ const password = '123456';
 
 const sequelize = new Sequelize(database, username, password, {
   host: 'localhost',
-  dialect: 'mysql'
+  dialect: 'mysql',
+  define: {
+    // 禁止表名推断，强制表名称等于模型名称。
+    freezeTableName: true,
+  }
 });
 
 fs.readdirSync(__dirname).filter((file) => {
   return file.slice(-3) === '.js' && file !== basename;
 }).forEach(file => {
   // require 阻塞式地加载文件
-  if (file === 'application.js' || file === 'table.js' || file === 'schema.js' || file === 'subgrid.js') {
-    const modelBuilder = require(path.join(__dirname, file));
-    const model = modelBuilder(sequelize, Sequelize);
-    models[model.name] = model;
-  }
-  // const modelBuilder = require(path.join(__dirname, file));
-  // const model = modelBuilder(sequelize, Sequelize);
-  // models[model.name] = model;
+  const model = require(path.join(__dirname, file))(sequelize, Sequelize);
+  models[model.name] = model;
 });
 
 Object.keys(models).forEach(modelName => {
@@ -42,8 +40,7 @@ Object.keys(models).forEach(modelName => {
   try {
     await sequelize.authenticate();
     console.log('Connection has been established successfully.');
-    sequelize.sync({ force: true });
-    console.log('force = true 时，数据库清空。');
+    sequelize.sync({ force: true }); // 模型同步
   } catch (error) {
     console.error('Unable to connect to the database:', error);
   }
