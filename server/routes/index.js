@@ -1,44 +1,42 @@
 const express = require('express');
 const router = express.Router();
 
-// const application = require('../controllers/application');
-// const schema = require('../controllers/schema');
-// const record = require('../controllers/record');
+const classroom = require('../controllers/classroom');
+const course = require('../controllers/course');
+const student = require('../controllers/student');
+const teacher = require('../controllers/teacher');
+const score = require('../controllers/score');
 const circle = require('../controllers/circle');
+
 // 再次进行权限验证
 router.all('*', function(req, res, next) {
   next();
 });
 
-// 认证登录
-// router.post('/login', auth.login);
-// router.put('/register', auth.register);
-// router.post('/password', auth.password);
+router.put('/classroom', classroom.create);
+router.delete('/classroom', classroom.delete);
+router.post('/classroom', classroom.update);
+router.get('/classroom', classroom.search);
 
-// 账户信息
-// router.put('/profile', profile.create);
-// router.delete('/profile', profile.delete);
-// router.post('/profile', profile.update);
-// router.get('/profile', profile.search);
+router.put('/course', course.create);
+router.delete('/course', course.delete);
+router.post('/course', course.update);
+router.get('/course', course.search);
 
-// 应用 【一个应用中包含多个表单】
-// router.put('/application', application.create);
-// router.delete('/application', application.delete);
-// router.post('/application', application.update);
-// router.get('/application', application.search);
+router.put('/score', score.create);
+router.delete('/score', score.delete);
+router.post('/score', score.update);
+router.get('/score', score.search);
 
-// 表单【一个表单中存在多条数据记录】
-// router.put('/schema', schema.create);
-// router.delete('/schema', schema.delete);
-// router.post('/schema', schema.update);
-// router.get('/schema', schema.search);
+router.put('/student', student.create);
+router.delete('/student', student.delete);
+router.post('/student', student.update);
+router.get('/student', student.search);
 
-// 记录【一条记录属于某个应用下的某个表单的数据记录】
-// 打开一条数据记录的方式【新增，只读，编辑】
-// router.put('/record', record.create);
-// router.delete('/record', record.delete);
-// router.post('/record', record.update);
-// router.get('/record', record.search);
+router.put('/teacher', teacher.create);
+router.delete('/teacher', teacher.delete);
+router.post('/teacher', teacher.update);
+router.get('/teacher', teacher.search);
 
 router.put('/api/circle', circle.create);
 router.delete('/api/circle', circle.delete);

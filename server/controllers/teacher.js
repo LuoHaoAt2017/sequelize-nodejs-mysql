@@ -2,16 +2,16 @@ module.exports = {
   async search(req, res) {
     res.status(200).send('查询成功');
   },
-  update(req, res) {
+  async update(req, res) {
     res.status(200).send('更新成功');
   },
-  delete(req, res) {
+  async delete(req, res) {
     res.status(200).send('删除成功');
   },
-  create(req, res) {
+  async create(req, res) {
     res.status(200).send('创建成功');
   },
-  getById(req, res) {
+  async getById(req, res) {
     res.status(200).send('查询成功');
   },
 }
