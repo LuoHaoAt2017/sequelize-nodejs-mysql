@@ -1,4 +1,3 @@
-const Schema = require('../models/index').Schema;
 module.exports = {
   async search(req, res) {
     res.status(200).send('查询成功');

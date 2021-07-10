@@ -1,4 +1,3 @@
-const Profile = require('../models/index').Profile;
 module.exports = {
   search(req, res) {
     res.status(200).send('查询成功');

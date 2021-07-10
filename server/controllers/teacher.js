@@ -1,4 +1,3 @@
-const Record = require('../models/index').Record;
 module.exports = {
   async search(req, res) {
     res.status(200).send('查询成功');

@@ -1,6 +1,4 @@
-const { Op } = require('sequelize');
-const Schema = require('../models/index').Schema;
-
+const Application = require('../models/index').Application;
 module.exports = {
   async search(req, res) {
   },

@@ -40,7 +40,7 @@ Object.keys(models).forEach(modelName => {
   try {
     await sequelize.authenticate();
     console.log('Connection has been established successfully.');
-    sequelize.sync(); // 模型同步
+    sequelize.sync({ force: true }); // 模型同步
   } catch (error) {
     console.error('Unable to connect to the database:', error);
   }
