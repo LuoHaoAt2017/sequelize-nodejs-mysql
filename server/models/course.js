@@ -6,7 +6,7 @@ module.exports = function (sequelize, Sequelize) {
     static associate(models) {
       Course.belongsTo(models.Teacher, {
         primaryKey: {
-          name: 'cid',
+          name: 'tid',
           type: Sequelize.DataTypes.UUID,
           allowNull: true,
         },
@@ -30,7 +30,11 @@ module.exports = function (sequelize, Sequelize) {
     cname: {
       type: Sequelize.DataTypes.STRING,
       allowNull: false,
-    }
+    },
+    tid: {
+      type: Sequelize.DataTypes.UUID,
+      allowNull: true,
+    },
   }, {
     sequelize: sequelize,
     modelName: 'Course',

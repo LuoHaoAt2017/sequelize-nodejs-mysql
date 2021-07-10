@@ -36,6 +36,10 @@ module.exports = function (sequelize, Sequelize) {
     gender: {
       type: Sequelize.DataTypes.BOOLEAN,
       allowNull: true,
+    },
+    cid: {
+      type: Sequelize.DataTypes.UUID,
+      allowNull: true,
     }
   }, {
     sequelize: sequelize, // 我们需要传递连接实例
