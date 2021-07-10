@@ -51,3 +51,5 @@ schema [schemaCode]
 
 实例
 object [objectId]
+
+聚合操作

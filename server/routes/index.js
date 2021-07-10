@@ -43,6 +43,6 @@ router.all('*', function(req, res, next) {
 router.put('/api/circle', circle.create);
 router.delete('/api/circle', circle.delete);
 router.post('/api/circle', circle.update);
-router.get('/api/circle', circle.search);
+router.get('/api/circle', circle.query1);
 
 module.exports = router;
